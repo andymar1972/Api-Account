@@ -13,12 +13,6 @@ public class AccountServiceImpl implements AccountService {
     // Instanciar accountResponse
     AccountResponse accountResponse = new AccountResponse();
 
-    // Monto aleatorio
-    double montoAleatorio = Math.random() 
-        * (Constant.MAX_AMOUNT - Constant.MIN_AMOUNT) 
-        + Constant.MIN_AMOUNT;
-    montoAleatorio = Math.round(montoAleatorio * 100) / 100d;
-
     // Pausa
     try {
       Thread.sleep(Constant.TIME_SLEEP);
@@ -28,7 +22,7 @@ public class AccountServiceImpl implements AccountService {
 
     // Asignar valores a accountResponse
     accountResponse.setAccountNumber(cardNumber + "XXX");
-    accountResponse.setAmount(montoAleatorio);
+    accountResponse.setAmount(100.00);
 
     // Retornar accountResponse
     return accountResponse;
